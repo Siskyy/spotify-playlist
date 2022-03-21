@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/spotify-playlist/static/css/main.d520a7cb.css",
+    "main.js": "/spotify-playlist/static/js/main.6eb5bc99.js",
+    "static/js/787.940c9719.chunk.js": "/spotify-playlist/static/js/787.940c9719.chunk.js",
+    "static/media/GreenFirewatchWallpaper.png": "/spotify-playlist/static/media/GreenFirewatchWallpaper.3e4d84658c28fcae991b.png",
+    "index.html": "/spotify-playlist/index.html",
+    "main.d520a7cb.css.map": "/spotify-playlist/static/css/main.d520a7cb.css.map",
+    "main.6eb5bc99.js.map": "/spotify-playlist/static/js/main.6eb5bc99.js.map",
+    "787.940c9719.chunk.js.map": "/spotify-playlist/static/js/787.940c9719.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d520a7cb.css",
+    "static/js/main.6eb5bc99.js"
+  ]
+}
