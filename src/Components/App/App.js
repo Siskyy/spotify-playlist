@@ -13,7 +13,11 @@ class App extends React.Component {
     this.state = {
       searchResults: [{name: 'Hello', artist: 'Adele', album: 'Goodbye', id: 1} 
       , {name: 'Space bound', artist: 'Eminem', album: 'Revival', id: 2}
-      , {name: 'Shape of you', artist: 'Ed Sheeran', album: 'Divide', id: 3}]
+      , {name: 'Shape of you', artist: 'Ed Sheeran', album: 'Divide', id: 3}],
+      playlistName: 'My Playlist',
+      playlistTracks: [{name: 'Black', artist: 'Dave', album: 'Santilations', id: 4}
+      , {name: 'WAP', artist: 'Cardi B', album: 'WAP', id: 5}
+      , {name: '505', artist: 'Arctic Monkeys', album: 'Favourite Worst Nightmare', id: 6}]
     }
   }
   
@@ -25,7 +29,8 @@ class App extends React.Component {
     <SearchBar />
     <div className="App-playlist">
       <SearchResults searchResults={this.state.searchResults} />
-      <Playlist />
+      <Playlist playlistName={this.state.playlistName} 
+                playlistTracks={this.state.playlistTracks} />
     </div>
   </div>
 </div>
