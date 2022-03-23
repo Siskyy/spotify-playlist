@@ -6,6 +6,8 @@ import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 import Spotify from '../../util/Spotify';
 
+/* My first react app - marcbertelli*/
+
 class App extends React.Component {
   
   constructor (props) {

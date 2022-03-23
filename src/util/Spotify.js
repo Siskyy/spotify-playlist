@@ -1,5 +1,5 @@
 const clientId = 'bb1e09fa2aaa422f8044418fa47ca202';
-const redirectUri = 'http://localhost:3000/callback';
+const redirectUri = 'http://playmixer.surge.sh';
 
 
 let accessToken;
