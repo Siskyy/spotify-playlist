@@ -68,7 +68,16 @@ const Spotify = {
                 method: 'POST',
                 body: JSON.stringify({ name: playlistName})
             }).then(response => response.json()
-            ).then(jsonResponse => {const playlistId = jsonResponse.id;})
+            ).then(jsonResponse => {
+                const playlistId = jsonResponse.id;
+                /* use the userID to make a POST request to create new playlist */
+                return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`, 
+                {
+                    headers: headers,
+                    method: 'POST',
+                    body: JSON.stringify({ uris: trackUris })
+                })
+            })
         });
 
     }

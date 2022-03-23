@@ -50,6 +50,12 @@ class App extends React.Component {
 
   savePlaylist () {
     const trackUri = this.state.playlistTracks.map(track => track.uri);
+    Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => /* will clear playlist and playlist name once playlist has been saved */ {
+      this.setState({ 
+        playlistName: 'New Playlist',
+        playlistTracks: []
+      })
+    })
   }
 
   search (searchItem) {
