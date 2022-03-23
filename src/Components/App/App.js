@@ -12,13 +12,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      searchResults: [{name: 'Hello', artist: 'Adele', album: 'Goodbye', id: 1} 
-      , {name: 'Space bound', artist: 'Eminem', album: 'Revival', id: 2}
-      , {name: 'Shape of you', artist: 'Ed Sheeran', album: 'Divide', id: 3}],
-      playlistName: 'My Playlist',
-      playlistTracks: [{name: 'Black', artist: 'Dave', album: 'Santilations', id: 4}
-      , {name: 'WAP', artist: 'Cardi B', album: 'WAP', id: 5}
-      , {name: '505', artist: 'Arctic Monkeys', album: 'Favourite Worst Nightmare', id: 6}]
+      searchResults: [],
+      playlistName: 'New Playlist',
+      playlistTracks: []
     };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
@@ -49,7 +45,7 @@ class App extends React.Component {
   }
 
   savePlaylist () {
-    const trackUri = this.state.playlistTracks.map(track => track.uri);
+    const trackUris = this.state.playlistTracks.map(track => track.uri);
     Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => /* will clear playlist and playlist name once playlist has been saved */ {
       this.setState({ 
         playlistName: 'New Playlist',

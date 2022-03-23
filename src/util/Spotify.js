@@ -1,5 +1,5 @@
-const client_id = 'hidden for GitHub purposes';
-const redirect_uri = 'http://localhost:3000/';
+const clientId = 'bb1e09fa2aaa422f8044418fa47ca202';
+const redirectUri = 'http://localhost:3000/';
 
 
 let accessToken;
@@ -23,7 +23,7 @@ const Spotify = {
             window.history.pushState('accessToken', null, '/');
             return accessToken;
         } else {
-            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirect_uri}`;
+            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
             window.location = accessUrl;
         }
         },
@@ -31,12 +31,12 @@ const Spotify = {
     // Allows user to search spotify using spotify fetch method with access token
     search(searchItem) {
         const accessToken = Spotify.getAccessToken();
+        const headers = { Authorization: `Bearer ${accessToken}`};
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${searchItem}`, 
-            { headers: {
-                Athorization: `Bearer ${accessToken}`
-            }}).then(response => {
+            { headers: headers }
+            ).then(response => {
                 // converting response to json 
-                return response.json();
+                return response.json()
             }).then(jsonResponse => {
                 if (!jsonResponse.tracks) /* checks if there are no tracks */ {
                     return [];
