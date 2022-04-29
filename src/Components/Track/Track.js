@@ -1,5 +1,6 @@
 import React from 'react';
 import './Track.css';
+import {BsPlusCircleFill} from '../../../node_modules/react-icons/bs';
 
 class Track extends React.Component {
     
@@ -13,7 +14,7 @@ class Track extends React.Component {
         if (this.props.isRemoval) {
             return <button className="Track-action" onClick={this.removeTrack} > - </button>
         } else {
-            return <button className="Track-action" onClick={this.addTrack} > + </button>
+            return <button className="Track-action" onClick={this.addTrack} > <BsPlusCircleFill /> </button>
         }
     }
 
