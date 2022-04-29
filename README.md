@@ -16,7 +16,7 @@
 
 ## Description
 
-An React app build using the above languages.
+A Front-end React app build using the above languages.
 This app uses the spotify API to allow the user to search for songs from the Spotify database.
 Users can also add the songs to a local playlist object to make a playlist of multiple songs.
 Then using their connected spotify account, the user can add this playlist to their spotify account, directly from the application.
